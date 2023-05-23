@@ -4,15 +4,9 @@
   "private": true,
   "packageManager": "yarn@3.5.1",
   "scripts": {
-    "dev": "rakkas",
-    "build": "rakkas build",
-    "start": "node dist/server",
-    "format": "prettier --write --ignore-unknown src",
-    "test": "yarn test:typecheck && yarn test:format && yarn test:lint && yarn test:unit",
-    "test:typecheck": "tsc -p tsconfig.json --noEmit",
-    "test:format": "prettier --check --ignore-unknown src",
-    "test:lint": "eslint . --ignore-pattern dist",
-    "test:unit": "vitest run"
+    "dev": "vite",
+    "build": "rakkas build && yarn move",
+    "move": "mv dist/server/cloudflare-workers-bundle.js dist/client/_worker.js"
   },
   "devDependencies": {
     "@rakkasjs/eslint-config": "0.6.20",

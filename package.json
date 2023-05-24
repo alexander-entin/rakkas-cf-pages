@@ -5,8 +5,7 @@
   "packageManager": "yarn@3.5.1",
   "scripts": {
     "dev": "vite",
-    "build": "rakkas build && yarn move",
-    "move": "mv dist/server/cloudflare-workers-bundle.js dist/client/_worker.js"
+    "build": "rakkas build"
   },
   "devDependencies": {
     "@rakkasjs/eslint-config": "0.6.20",

@@ -5,6 +5,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [
     tsconfigPaths(),
-    rakkas({ adapter: "netlify" }),
+    rakkas({ adapter: "netlify-edge" }),
   ],
 });
